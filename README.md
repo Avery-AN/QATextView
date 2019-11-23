@@ -7,5 +7,4 @@
 效果图如下:<br>
 ------------
 
-![示例](https://github.com/Avery-AN/QATextView/raw/master/DEMO_images/demo.png)><br>
-
+![效果图](https://github.com/Avery-AN/QATextView/raw/master/DEMO_images/demo.png)
