@@ -1,0 +1,391 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BB110A27238921F000E8D042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A26238921F000E8D042 /* AppDelegate.m */; };
+		BB110A32238921F200E8D042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB110A31238921F200E8D042 /* Assets.xcassets */; };
+		BB110A38238921F200E8D042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A37238921F200E8D042 /* main.m */; };
+		BB110A4023892ECA00E8D042 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A3F23892ECA00E8D042 /* RootViewController.m */; };
+		BB110A522389304D00E8D042 /* QATextView.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A422389304D00E8D042 /* QATextView.m */; };
+		BB110A532389304D00E8D042 /* QAEmojiTextAttachment.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A442389304D00E8D042 /* QAEmojiTextAttachment.m */; };
+		BB110A542389304D00E8D042 /* emoji_1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB110A472389304D00E8D042 /* emoji_1@2x.png */; };
+		BB110A552389304D00E8D042 /* emoji_1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB110A482389304D00E8D042 /* emoji_1@3x.png */; };
+		BB110A562389304D00E8D042 /* emoji_2@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB110A492389304D00E8D042 /* emoji_2@3x.png */; };
+		BB110A572389304D00E8D042 /* emoji_2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BB110A4A2389304D00E8D042 /* emoji_2@2x.png */; };
+		BB110A582389304D00E8D042 /* QAHighlightTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A4D2389304D00E8D042 /* QAHighlightTextStorage.m */; };
+		BB110A592389304D00E8D042 /* NSString+SimpleModifier.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A502389304D00E8D042 /* NSString+SimpleModifier.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BB110A22238921F000E8D042 /* QATextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QATextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB110A25238921F000E8D042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		BB110A26238921F000E8D042 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		BB110A31238921F200E8D042 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BB110A36238921F200E8D042 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BB110A37238921F200E8D042 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BB110A3E23892ECA00E8D042 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		BB110A3F23892ECA00E8D042 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		BB110A422389304D00E8D042 /* QATextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QATextView.m; sourceTree = "<group>"; };
+		BB110A442389304D00E8D042 /* QAEmojiTextAttachment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAEmojiTextAttachment.m; sourceTree = "<group>"; };
+		BB110A452389304D00E8D042 /* QAEmojiTextAttachment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAEmojiTextAttachment.h; sourceTree = "<group>"; };
+		BB110A472389304D00E8D042 /* emoji_1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_1@2x.png"; sourceTree = "<group>"; };
+		BB110A482389304D00E8D042 /* emoji_1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_1@3x.png"; sourceTree = "<group>"; };
+		BB110A492389304D00E8D042 /* emoji_2@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_2@3x.png"; sourceTree = "<group>"; };
+		BB110A4A2389304D00E8D042 /* emoji_2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "emoji_2@2x.png"; sourceTree = "<group>"; };
+		BB110A4C2389304D00E8D042 /* QAHighlightTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QAHighlightTextStorage.h; sourceTree = "<group>"; };
+		BB110A4D2389304D00E8D042 /* QAHighlightTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QAHighlightTextStorage.m; sourceTree = "<group>"; };
+		BB110A4E2389304D00E8D042 /* QATextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QATextView.h; sourceTree = "<group>"; };
+		BB110A502389304D00E8D042 /* NSString+SimpleModifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SimpleModifier.m"; sourceTree = "<group>"; };
+		BB110A512389304D00E8D042 /* NSString+SimpleModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SimpleModifier.h"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BB110A1F238921F000E8D042 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BB110A19238921F000E8D042 = {
+			isa = PBXGroup;
+			children = (
+				BB110A24238921F000E8D042 /* QATextView */,
+				BB110A23238921F000E8D042 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BB110A23238921F000E8D042 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BB110A22238921F000E8D042 /* QATextView.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BB110A24238921F000E8D042 /* QATextView */ = {
+			isa = PBXGroup;
+			children = (
+				BB110A25238921F000E8D042 /* AppDelegate.h */,
+				BB110A26238921F000E8D042 /* AppDelegate.m */,
+				BB110A3E23892ECA00E8D042 /* RootViewController.h */,
+				BB110A3F23892ECA00E8D042 /* RootViewController.m */,
+				BB110A412389304D00E8D042 /* QATextView */,
+				BB110A31238921F200E8D042 /* Assets.xcassets */,
+				BB110A36238921F200E8D042 /* Info.plist */,
+				BB110A37238921F200E8D042 /* main.m */,
+			);
+			path = QATextView;
+			sourceTree = "<group>";
+		};
+		BB110A412389304D00E8D042 /* QATextView */ = {
+			isa = PBXGroup;
+			children = (
+				BB110A4E2389304D00E8D042 /* QATextView.h */,
+				BB110A422389304D00E8D042 /* QATextView.m */,
+				BB110A4B2389304D00E8D042 /* Storage */,
+				BB110A432389304D00E8D042 /* Attachment */,
+				BB110A4F2389304D00E8D042 /* DIyEmojiManager */,
+				BB110A462389304D00E8D042 /* Resources */,
+			);
+			path = QATextView;
+			sourceTree = "<group>";
+		};
+		BB110A432389304D00E8D042 /* Attachment */ = {
+			isa = PBXGroup;
+			children = (
+				BB110A452389304D00E8D042 /* QAEmojiTextAttachment.h */,
+				BB110A442389304D00E8D042 /* QAEmojiTextAttachment.m */,
+			);
+			path = Attachment;
+			sourceTree = "<group>";
+		};
+		BB110A462389304D00E8D042 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BB110A472389304D00E8D042 /* emoji_1@2x.png */,
+				BB110A482389304D00E8D042 /* emoji_1@3x.png */,
+				BB110A492389304D00E8D042 /* emoji_2@3x.png */,
+				BB110A4A2389304D00E8D042 /* emoji_2@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BB110A4B2389304D00E8D042 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				BB110A4C2389304D00E8D042 /* QAHighlightTextStorage.h */,
+				BB110A4D2389304D00E8D042 /* QAHighlightTextStorage.m */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
+		BB110A4F2389304D00E8D042 /* DIyEmojiManager */ = {
+			isa = PBXGroup;
+			children = (
+				BB110A512389304D00E8D042 /* NSString+SimpleModifier.h */,
+				BB110A502389304D00E8D042 /* NSString+SimpleModifier.m */,
+			);
+			path = DIyEmojiManager;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BB110A21238921F000E8D042 /* QATextView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BB110A3B238921F200E8D042 /* Build configuration list for PBXNativeTarget "QATextView" */;
+			buildPhases = (
+				BB110A1E238921F000E8D042 /* Sources */,
+				BB110A1F238921F000E8D042 /* Frameworks */,
+				BB110A20238921F000E8D042 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QATextView;
+			productName = QATextView;
+			productReference = BB110A22238921F000E8D042 /* QATextView.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BB110A1A238921F000E8D042 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1120;
+				ORGANIZATIONNAME = Avery;
+				TargetAttributes = {
+					BB110A21238921F000E8D042 = {
+						CreatedOnToolsVersion = 11.2;
+					};
+				};
+			};
+			buildConfigurationList = BB110A1D238921F000E8D042 /* Build configuration list for PBXProject "QATextView" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BB110A19238921F000E8D042;
+			productRefGroup = BB110A23238921F000E8D042 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BB110A21238921F000E8D042 /* QATextView */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BB110A20238921F000E8D042 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB110A572389304D00E8D042 /* emoji_2@2x.png in Resources */,
+				BB110A32238921F200E8D042 /* Assets.xcassets in Resources */,
+				BB110A562389304D00E8D042 /* emoji_2@3x.png in Resources */,
+				BB110A552389304D00E8D042 /* emoji_1@3x.png in Resources */,
+				BB110A542389304D00E8D042 /* emoji_1@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BB110A1E238921F000E8D042 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB110A592389304D00E8D042 /* NSString+SimpleModifier.m in Sources */,
+				BB110A27238921F000E8D042 /* AppDelegate.m in Sources */,
+				BB110A522389304D00E8D042 /* QATextView.m in Sources */,
+				BB110A38238921F200E8D042 /* main.m in Sources */,
+				BB110A582389304D00E8D042 /* QAHighlightTextStorage.m in Sources */,
+				BB110A532389304D00E8D042 /* QAEmojiTextAttachment.m in Sources */,
+				BB110A4023892ECA00E8D042 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		BB110A39238921F200E8D042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		BB110A3A238921F200E8D042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BB110A3C238921F200E8D042 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QATextView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Avery.QATextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		BB110A3D238921F200E8D042 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = QATextView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Avery.QATextView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BB110A1D238921F000E8D042 /* Build configuration list for PBXProject "QATextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB110A39238921F200E8D042 /* Debug */,
+				BB110A3A238921F200E8D042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BB110A3B238921F200E8D042 /* Build configuration list for PBXNativeTarget "QATextView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BB110A3C238921F200E8D042 /* Debug */,
+				BB110A3D238921F200E8D042 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BB110A1A238921F000E8D042 /* Project object */;
+}
