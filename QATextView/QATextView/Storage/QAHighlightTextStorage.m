@@ -12,6 +12,9 @@
 #import "QATextView.h"
 #include <pthread.h>
 
+static float wordSpace = 1.3;
+static float lineSpace = 2.5;
+
 typedef NS_ENUM(NSUInteger, QAHighlightTextStorage_HighlightStyle) {
     QAHighlightTextStorage_default = 1,
     QAHighlightTextStorage_highlight,
@@ -93,6 +96,10 @@ static NSString *TopicPattern = @"#[0-9a-zA-Z\\u4e00-\\u9fa5]+#";
 - (void)processEditing {
     [super processEditing];
     
+    // 修改行间距 & 字间距:
+    NSRange range = NSMakeRange(0, self.length);
+    [self updateWordsAttribute:self withRange:range];
+    
     @autoreleasepool {
         // 去除当前文本的颜色属性:
         NSRange paragaphRange = [self.string paragraphRangeForRange:self.editedRange];
@@ -169,6 +176,9 @@ static NSString *TopicPattern = @"#[0-9a-zA-Z\\u4e00-\\u9fa5]+#";
         _emojiAttributedStr = [[NSMutableAttributedString alloc] initWithAttributedString:emojiAttributedString];
         NSRange range = NSMakeRange(0, 1);
         [_emojiAttributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:fontSize] range:range];
+
+        // 修改行间距 & 字间距:
+        [self updateWordsAttribute:_emojiAttributedStr withRange:range];
         
         [self deleteCharactersInRange:result.range];
     }
@@ -197,6 +207,21 @@ static NSString *TopicPattern = @"#[0-9a-zA-Z\\u4e00-\\u9fa5]+#";
     [self.qa_delegate changeSelectedRange:range];
     
     pthread_mutex_unlock(&_mutex);
+}
+
+/**
+ 修改行间距 & 字间距
+ */
+- (void)updateWordsAttribute:(NSMutableAttributedString *)attributedString withRange:(NSRange)range {
+    // 设置字体的行间距:
+    NSMutableParagraphStyle *paragraphStyle = [[NSMutableParagraphStyle alloc] init];
+    paragraphStyle.lineSpacing = lineSpace;
+    [attributedString removeAttribute:NSParagraphStyleAttributeName range:range];
+    [attributedString addAttribute:NSParagraphStyleAttributeName value:paragraphStyle range:range];
+    
+    // 设置字间距:
+    [attributedString removeAttribute:NSKernAttributeName range:range];
+    [attributedString addAttribute:NSKernAttributeName value:@(wordSpace) range:range];
 }
 
 
