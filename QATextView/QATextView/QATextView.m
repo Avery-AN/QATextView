@@ -8,10 +8,13 @@
 
 #import "QATextView.h"
 
-@interface QATextView () <QAHighlightTextStorageDelegate, UITextViewDelegate>
+static NSInteger maxContentHeight = 100;
+
+@interface QATextView () <QAHighlightTextStorageDelegate>
 @property (nonatomic, copy) QAHighlightTextStorage *qaTextStorage;
 @property (nonatomic, copy) NSLayoutManager *qaTextLayoutManager;
 @property (nonatomic, copy) NSTextContainer *qaTextContainer;
+@property (nonatomic, assign) NSInteger contentHeight_default;
 @end
 
 @implementation QATextView
@@ -19,6 +22,7 @@
 #pragma mark - Life Cycle -
 - (void)dealloc {
     NSLog(@"%s",__func__);
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 - (instancetype)initWithFrame:(CGRect)frame {
     _qaTextStorage = [[QAHighlightTextStorage alloc] init];
@@ -29,24 +33,42 @@
     
     if (self = [super initWithFrame:frame textContainer:_qaTextContainer]) {
         _qaTextStorage.qa_delegate = self;
-        // self.delegate = self;
+        self.contentHeight_default = frame.size.height;
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textValueChanged) name:UITextViewTextDidChangeNotification object:self];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textViewBeginEditing) name:UITextViewTextDidBeginEditingNotification object:self];
     }
     
     return self;
 }
 
 
-/*
-#pragma mark - UITextView delegate -
-- (void)textViewDidChange:(UITextView*)textView {
-    UITextRange *markedTextRange = [textView markedTextRange];
-    UITextPosition *textPosition = [textView positionFromPosition:markedTextRange.start offset:0];
-    if (markedTextRange && textPosition) {
-        NSLog(@" ------????????????????");
-        return;
+#pragma mark - NSNotificationCenter Observer Methods -
+- (void)textViewBeginEditing {
+    if (fabs(self.contentHeight_default - 0.) <= 1) {
+        [self layoutIfNeeded];
+        self.contentHeight_default = self.frame.size.height;
     }
 }
-*/
+- (void)textValueChanged {
+    UITextRange *markedTextRange = [self markedTextRange];
+    UITextPosition *textPosition = [self positionFromPosition:markedTextRange.start offset:0];
+    if (markedTextRange && textPosition) {
+        return;
+    }
+    
+    NSInteger textContentHeight = ceilf([self sizeThatFits:CGSizeMake(self.bounds.size.width, MAXFLOAT)].height);
+
+    // 超过最大高度后设置其可以滚动:
+    self.scrollEnabled = (textContentHeight - maxContentHeight > 0.) ? YES : NO;
+    
+    if (self.contentChangedBlock) {
+        self.contentChangedBlock(self, self.text);
+    }
+    if (self.contentHeightChangedBlock && textContentHeight - self.contentHeight_default > 0 && self.scrollEnabled == NO) {
+        self.contentHeightChangedBlock(self, textContentHeight);
+    }
+}
 
 
 #pragma mark - QAHighlightTextStorage Delegate -

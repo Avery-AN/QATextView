@@ -20,6 +20,16 @@ NS_ASSUME_NONNULL_BEGIN
 */
 @property (nonatomic, assign, readonly) NSInteger contentLength;
 
+/**
+ QATextView的高度变化block
+ */
+@property (nonatomic, copy) void(^contentHeightChangedBlock)(QATextView * _Nonnull textView, NSInteger textHeight);
+
+/**
+ QATextView的内容变化block
+ */
+@property (nonatomic, copy) void(^contentChangedBlock)(QATextView * _Nonnull textView, NSString * _Nullable text);
+
 @end
 
 NS_ASSUME_NONNULL_END

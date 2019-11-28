@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BA4E0AA35A10C233C2618F2D /* Pods_QATextView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A89C49F5CB6180288A387DE6 /* Pods_QATextView.framework */; };
+		BB0E3433238F754000FCCFEE /* BasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0E3432238F754000FCCFEE /* BasicViewController.m */; };
+		BB0E3436238F754D00FCCFEE /* TableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0E3435238F754D00FCCFEE /* TableViewController.m */; };
+		BB0E3439238F768B00FCCFEE /* TableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BB0E3437238F768B00FCCFEE /* TableViewCell.m */; };
 		BB110A27238921F000E8D042 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A26238921F000E8D042 /* AppDelegate.m */; };
 		BB110A32238921F200E8D042 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BB110A31238921F200E8D042 /* Assets.xcassets */; };
 		BB110A38238921F200E8D042 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BB110A37238921F200E8D042 /* main.m */; };
@@ -22,6 +26,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04EE6DCDADA317635B8E6869 /* Pods-QATextView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QATextView.debug.xcconfig"; path = "Target Support Files/Pods-QATextView/Pods-QATextView.debug.xcconfig"; sourceTree = "<group>"; };
+		7CC037D830EDB0A245CEC76C /* Pods-QATextView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QATextView.release.xcconfig"; path = "Target Support Files/Pods-QATextView/Pods-QATextView.release.xcconfig"; sourceTree = "<group>"; };
+		A89C49F5CB6180288A387DE6 /* Pods_QATextView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QATextView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BB0E3431238F754000FCCFEE /* BasicViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BasicViewController.h; sourceTree = "<group>"; };
+		BB0E3432238F754000FCCFEE /* BasicViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BasicViewController.m; sourceTree = "<group>"; };
+		BB0E3434238F754D00FCCFEE /* TableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewController.h; sourceTree = "<group>"; };
+		BB0E3435238F754D00FCCFEE /* TableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewController.m; sourceTree = "<group>"; };
+		BB0E3437238F768B00FCCFEE /* TableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableViewCell.m; sourceTree = "<group>"; };
+		BB0E3438238F768B00FCCFEE /* TableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewCell.h; sourceTree = "<group>"; };
 		BB110A22238921F000E8D042 /* QATextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QATextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB110A25238921F000E8D042 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BB110A26238921F000E8D042 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -42,6 +55,7 @@
 		BB110A4E2389304D00E8D042 /* QATextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QATextView.h; sourceTree = "<group>"; };
 		BB110A502389304D00E8D042 /* NSString+SimpleModifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SimpleModifier.m"; sourceTree = "<group>"; };
 		BB110A512389304D00E8D042 /* NSString+SimpleModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SimpleModifier.h"; sourceTree = "<group>"; };
+		BB7BEC4E238F788D00688028 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,17 +63,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA4E0AA35A10C233C2618F2D /* Pods_QATextView.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1888D38A8035C3EA03ABBA97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				04EE6DCDADA317635B8E6869 /* Pods-QATextView.debug.xcconfig */,
+				7CC037D830EDB0A245CEC76C /* Pods-QATextView.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BB0E342F238F745600FCCFEE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				BB0E3434238F754D00FCCFEE /* TableViewController.h */,
+				BB0E3435238F754D00FCCFEE /* TableViewController.m */,
+				BB0E3438238F768B00FCCFEE /* TableViewCell.h */,
+				BB0E3437238F768B00FCCFEE /* TableViewCell.m */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		BB0E3430238F745D00FCCFEE /* Basic */ = {
+			isa = PBXGroup;
+			children = (
+				BB0E3431238F754000FCCFEE /* BasicViewController.h */,
+				BB0E3432238F754000FCCFEE /* BasicViewController.m */,
+			);
+			path = Basic;
+			sourceTree = "<group>";
+		};
 		BB110A19238921F000E8D042 = {
 			isa = PBXGroup;
 			children = (
 				BB110A24238921F000E8D042 /* QATextView */,
 				BB110A23238921F000E8D042 /* Products */,
+				1888D38A8035C3EA03ABBA97 /* Pods */,
+				CF1FB2756946E4898EEB31C1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,10 +124,13 @@
 				BB110A26238921F000E8D042 /* AppDelegate.m */,
 				BB110A3E23892ECA00E8D042 /* RootViewController.h */,
 				BB110A3F23892ECA00E8D042 /* RootViewController.m */,
+				BB0E3430238F745D00FCCFEE /* Basic */,
+				BB0E342F238F745600FCCFEE /* TableView */,
 				BB110A412389304D00E8D042 /* QATextView */,
 				BB110A31238921F200E8D042 /* Assets.xcassets */,
 				BB110A36238921F200E8D042 /* Info.plist */,
 				BB110A37238921F200E8D042 /* main.m */,
+				BB7BEC4E238F788D00688028 /* PrefixHeader.pch */,
 			);
 			path = QATextView;
 			sourceTree = "<group>";
@@ -137,6 +186,14 @@
 			path = DIyEmojiManager;
 			sourceTree = "<group>";
 		};
+		CF1FB2756946E4898EEB31C1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A89C49F5CB6180288A387DE6 /* Pods_QATextView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -144,9 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BB110A3B238921F200E8D042 /* Build configuration list for PBXNativeTarget "QATextView" */;
 			buildPhases = (
+				72BDB2A48C5D14DF466F1373 /* [CP] Check Pods Manifest.lock */,
 				BB110A1E238921F000E8D042 /* Sources */,
 				BB110A1F238921F000E8D042 /* Frameworks */,
 				BB110A20238921F000E8D042 /* Resources */,
+				593852EBC092022227312393 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,14 +263,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		593852EBC092022227312393 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QATextView/Pods-QATextView-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QATextView/Pods-QATextView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72BDB2A48C5D14DF466F1373 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QATextView-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BB110A1E238921F000E8D042 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BB110A592389304D00E8D042 /* NSString+SimpleModifier.m in Sources */,
+				BB0E3433238F754000FCCFEE /* BasicViewController.m in Sources */,
 				BB110A27238921F000E8D042 /* AppDelegate.m in Sources */,
+				BB0E3439238F768B00FCCFEE /* TableViewCell.m in Sources */,
 				BB110A522389304D00E8D042 /* QATextView.m in Sources */,
+				BB0E3436238F754D00FCCFEE /* TableViewController.m in Sources */,
 				BB110A38238921F200E8D042 /* main.m in Sources */,
 				BB110A582389304D00E8D042 /* QAHighlightTextStorage.m in Sources */,
 				BB110A532389304D00E8D042 /* QAEmojiTextAttachment.m in Sources */,
@@ -334,10 +443,12 @@
 		};
 		BB110A3C238921F200E8D042 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 04EE6DCDADA317635B8E6869 /* Pods-QATextView.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9YF9J5KM6;
+				GCC_PREFIX_HEADER = QATextView/PrefixHeader.pch;
 				INFOPLIST_FILE = QATextView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -352,10 +463,12 @@
 		};
 		BB110A3D238921F200E8D042 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7CC037D830EDB0A245CEC76C /* Pods-QATextView.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = D9YF9J5KM6;
+				GCC_PREFIX_HEADER = QATextView/PrefixHeader.pch;
 				INFOPLIST_FILE = QATextView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (

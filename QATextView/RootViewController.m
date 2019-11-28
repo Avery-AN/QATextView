@@ -7,11 +7,8 @@
 //
 
 #import "RootViewController.h"
-#import "QATextView.h"
-
-@interface RootViewController ()
-@property (nonatomic, strong) QATextView *textView;
-@end
+#import "BasicViewController.h"
+#import "TableViewController.h"
 
 @implementation RootViewController
 
@@ -24,49 +21,28 @@
     UIButton *button_1 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button_1.titleLabel setFont:[UIFont systemFontOfSize:17]];
     button_1.backgroundColor = [UIColor orangeColor];
-    button_1.frame = CGRectMake(30, 260, [UIScreen mainScreen].bounds.size.width - 30*2, 50);
-    [button_1 setTitle:@"打印TextView.text的值" forState:UIControlStateNormal];
+    button_1.frame = CGRectMake(60, 150, [UIScreen mainScreen].bounds.size.width - 60*2, 50);
+    [button_1 setTitle:@"基础使用" forState:UIControlStateNormal];
     [button_1 addTarget:self action:@selector(action_1) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button_1];
     
     UIButton *button_2 = [UIButton buttonWithType:UIButtonTypeCustom];
     [button_2.titleLabel setFont:[UIFont systemFontOfSize:17]];
     button_2.backgroundColor = [UIColor orangeColor];
-    button_2.frame = CGRectMake(30, 320, [UIScreen mainScreen].bounds.size.width - 30*2, 50);
-    [button_2 setTitle:@"模拟自定义emoji键盘 - 输入emoji表情" forState:UIControlStateNormal];
+    button_2.frame = CGRectMake(60, 220, [UIScreen mainScreen].bounds.size.width - 60*2, 50);
+    [button_2 setTitle:@"在TableView中的使用" forState:UIControlStateNormal];
     [button_2 addTarget:self action:@selector(action_2) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button_2];
-    
-    _textView = [[QATextView alloc] initWithFrame:CGRectMake(10, 90, [UIScreen mainScreen].bounds.size.width - 10*2, 160)];
-    _textView.backgroundColor = [UIColor lightGrayColor];
-    _textView.font = [UIFont systemFontOfSize:18];
-    [self.view addSubview:_textView];
 }
 
 - (void)action_1 {
-    NSLog(@"textView.text: %@",_textView.text);
-    NSLog(@"  textView.text.length: %ld",_textView.text.length);
-    NSLog(@"textView.contentLength: %ld",_textView.contentLength);
+    BasicViewController *basicVC = [[BasicViewController alloc] init];
+    [self.navigationController pushViewController:basicVC animated:YES];
 }
 
-/**
- 模拟自定义的Emoji键盘输入Emoji表情
- */
 - (void)action_2 {
-    NSString *emojiText = @"[害羞]";
-    UIImage *image = [UIImage imageNamed:@"emoji_2"];
-    QAEmojiTextAttachment *atacchment = [[QAEmojiTextAttachment alloc] initWithData:nil ofType:nil];
-    atacchment.image = image;
-    atacchment.emojiText = emojiText;
-    NSAttributedString *emojiAttributedString = [NSAttributedString attributedStringWithAttachment:atacchment];
-    NSMutableAttributedString *emojiAttributedStr = [[NSMutableAttributedString alloc] initWithAttributedString:emojiAttributedString];
-    NSRange range = NSMakeRange(0, 1);
-    CGFloat fontSize = self.textView.font.pointSize;
-    [emojiAttributedStr addAttribute:NSFontAttributeName value:[UIFont systemFontOfSize:fontSize] range:range];
-    
-    NSRange currentRange = self.textView.selectedRange;
-    [self.textView.textStorage insertAttributedString:emojiAttributedStr atIndex:currentRange.location];
-    self.textView.selectedRange = NSMakeRange(currentRange.location + 1, 0);
+    TableViewController *tableVC = [[TableViewController alloc] init];
+    [self.navigationController pushViewController:tableVC animated:YES];
 }
 
 
