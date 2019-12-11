@@ -56,6 +56,7 @@
 		BB110A502389304D00E8D042 /* NSString+SimpleModifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+SimpleModifier.m"; sourceTree = "<group>"; };
 		BB110A512389304D00E8D042 /* NSString+SimpleModifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+SimpleModifier.h"; sourceTree = "<group>"; };
 		BB7BEC4E238F788D00688028 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		BBCD5DB323A0912100950B71 /* QATextViewConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QATextViewConfig.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +139,7 @@
 		BB110A412389304D00E8D042 /* QATextView */ = {
 			isa = PBXGroup;
 			children = (
+				BBCD5DB323A0912100950B71 /* QATextViewConfig.h */,
 				BB110A4E2389304D00E8D042 /* QATextView.h */,
 				BB110A422389304D00E8D042 /* QATextView.m */,
 				BB110A4B2389304D00E8D042 /* Storage */,

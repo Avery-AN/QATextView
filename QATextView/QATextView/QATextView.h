@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "QAHighlightTextStorage.h"
-#import "QAEmojiTextAttachment.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

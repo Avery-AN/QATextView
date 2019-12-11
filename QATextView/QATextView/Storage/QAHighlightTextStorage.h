@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "QATextViewConfig.h"
 
 @protocol QAHighlightTextStorageDelegate <NSObject>
 - (void)changeSelectedRange:(NSRange)range;

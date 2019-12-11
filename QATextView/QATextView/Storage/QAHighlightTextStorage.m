@@ -12,9 +12,6 @@
 #import "QATextView.h"
 #include <pthread.h>
 
-static float wordSpace = 1.3;
-static float lineSpace = 2.5;
-
 typedef NS_ENUM(NSUInteger, QAHighlightTextStorage_HighlightStyle) {
     QAHighlightTextStorage_default = 1,
     QAHighlightTextStorage_highlight,
@@ -23,11 +20,6 @@ typedef NS_ENUM(NSUInteger, QAHighlightTextStorage_HighlightStyle) {
     QAHighlightTextStorage_topic,
     QAHighlightTextStorage_emoji
 };
-static NSString *HighlightPattern = @"(\\*\\w+(\\s*\\w+)*\\s*\\*)";
-static NSString *EmojiTextPattern = @"\\[[0-9a-zA-Z\\u4e00-\\u9fa5]+\\]";  // 匹配Emoji表情的正则表达式
-static NSString *LinkPattern = @"((http[s]{0,1}|ftp)://[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)|(www.[a-zA-Z0-9\\.\\-]+\\.([a-zA-Z]{2,4})(:\\d+)?(/[a-zA-Z0-9\\.\\-~!@#$%^&*+?:_/=<>]*)?)";
-static NSString *AtPattern = @"@[0-9a-zA-Z\\u4e00-\\u9fa5]+";
-static NSString *TopicPattern = @"#[0-9a-zA-Z\\u4e00-\\u9fa5]+#";
 
 @interface QAHighlightTextStorage () <NSTextStorageDelegate> {
     NSMutableAttributedString *_mutableAttributedString;
@@ -58,11 +50,11 @@ static NSString *TopicPattern = @"#[0-9a-zA-Z\\u4e00-\\u9fa5]+#";
         pthread_mutex_init(&_mutex, NULL);
         
         _mutableAttributedString = [[NSMutableAttributedString alloc] init];
-        _highlightExpression = [NSRegularExpression regularExpressionWithPattern:HighlightPattern options:0 error:NULL];
-        _linkExpression = [NSRegularExpression regularExpressionWithPattern:LinkPattern options:0 error:NULL];
-        _atExpression = [NSRegularExpression regularExpressionWithPattern:AtPattern options:0 error:NULL];
-        _topicExpression = [NSRegularExpression regularExpressionWithPattern:TopicPattern options:0 error:NULL];
-        _emojiExpression = [NSRegularExpression regularExpressionWithPattern:EmojiTextPattern options:0 error:NULL];
+        _highlightExpression = [NSRegularExpression regularExpressionWithPattern:QAHighlightRegularExpression options:0 error:NULL];
+        _linkExpression = [NSRegularExpression regularExpressionWithPattern:QALinkRegularExpression options:0 error:NULL];
+        _atExpression = [NSRegularExpression regularExpressionWithPattern:QAAtRegularExpression options:0 error:NULL];
+        _topicExpression = [NSRegularExpression regularExpressionWithPattern:QATopicRegularExpression options:0 error:NULL];
+        _emojiExpression = [NSRegularExpression regularExpressionWithPattern:QAEmojiRegularExpression options:0 error:NULL];
         
         self.delegate = self;
     }
